@@ -7,7 +7,6 @@ router.use(function(err, req, res, next){
     res.render('500', { error: err });
 });
 
-
 router.use("/", function (req, res){
     res.status(404);
     res.format({
