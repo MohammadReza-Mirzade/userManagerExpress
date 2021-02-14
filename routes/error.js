@@ -4,7 +4,8 @@ const router = express.Router();
 router.use(function(err, req, res, next){
     if (!module.children) console.error(err.stack);
     res.status(err.status || 500);
-    res.render('500', { error: err });
+    console.log(err);
+    res.render('500');
 });
 
 router.use("/", function (req, res){
